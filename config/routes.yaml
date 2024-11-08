@@ -10,3 +10,7 @@ controllers:
     prefix: '/{_locale<fr|en>}'
     defaults:
         _locale: 'fr'
+
+admin:
+    path: /admin
+    controller: App\Controller\Admin\DashboardController::index
