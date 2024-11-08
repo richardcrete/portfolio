@@ -1,5 +1,12 @@
+root:
+    path: '/'
+    controller: App\Controller\HomeController::root
+
 controllers:
     resource:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    prefix: '/{_locale<fr|en>}'
+    defaults:
+        _locale: 'fr'
