@@ -1,0 +1,25 @@
+services:
+  php:
+    build:
+      context: ./docker/php
+    container_name: php
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www
+    user: "1000:1000"
+    tmpfs:
+      - /tmp:rw
+      - /.composer:rw
+  db:
+    image: mysql:5.7
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - "8081:8080"
