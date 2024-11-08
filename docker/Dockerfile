@@ -10,9 +10,9 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 RUN install-php-extensions apcu gd opcache redis zip intl pdo_mysql xsl
 
-COPY ./conf.d/docker-php.ini /usr/local/etc/php/conf.d/
+COPY php/conf.d/docker-php.ini /usr/local/etc/php/conf.d/
 COPY ./apache/apache.conf /etc/apache2/sites-enabled/000-default.conf
-COPY . /var/www
+COPY php /var/www
 
 WORKDIR /var/www
 
