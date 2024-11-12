@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 40px 25px;
 
-  @media (min-width: $maxLg) {
+  @media (min-width: $minXl) {
     flex-direction: row;
     gap: 50px;
     padding: 0 80px;
@@ -12,8 +12,14 @@
   &-header {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--box-background);
 
-    @media (min-width: $maxLg) {
+    @media (min-width: $minXl) {
+      max-width: 50%;
+      width: 100%;
       height: calc(100vh - 200px);
       position: sticky;
       top: 100px;
@@ -35,6 +41,11 @@
 
   &-menu {
     display: none;
+
+    @media (min-width: $minXl) {
+      display: flex;
+      text-transform: uppercase;
+    }
   }
 
   &-tools {
@@ -52,17 +63,39 @@
     gap: 10px;
   }
 
-  &-link, &-switchers {
-    svg {
-      width: 24px;
+  &-links, &-switchers {
+    a, button {
+      color: var(--text-bold);
 
-      path {
-        fill: var(--text-bold);
+      svg {
+        width: 24px;
+
+        path {
+          fill: var(--text-bold);
+        }
       }
     }
 
-    a {
-      color: var(--text-bold);
+    @media (min-width: $minXl) {
+      a, button {
+        color: var(--text);
+
+        svg {
+          path {
+            fill: var(--text);
+          }
+        }
+
+        &:hover {
+          color: var(--text-bold);
+
+          svg {
+            path {
+              fill: var(--text-bold);
+            }
+          }
+        }
+      }
     }
 
     button {
@@ -70,9 +103,8 @@
       background: none;
       padding: 0;
       margin: 0;
+      cursor: pointer;
     }
-
-    // TODO media
   }
 
   &-theme {
@@ -96,7 +128,9 @@
   }
 
   &-content {
-    @media (min-width: $maxLg) {
+    @media (min-width: $minXl) {
+      max-width: 50%;
+      width: 100%;
       padding: 100px 0;
     }
   }
@@ -107,7 +141,7 @@
     gap: 25px;
     margin-top: 100px;
 
-    @media (min-width: $maxLg) {
+    @media (min-width: $minXl) {
       margin-top: 0;
     }
   }

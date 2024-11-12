@@ -1,6 +1,10 @@
 .Section {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
+  background-color: var(--box-background);
+  padding: 20px;
 
   &-title {
     text-transform: uppercase;

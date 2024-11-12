@@ -10,7 +10,44 @@
         <h2 class="Portfolio-subtitle h2">{{ 'index.job'|trans }}</h2>
         <p class="Portfolio-description">{{ 'index.description'|trans }}</p>
     </div>
-    <div class="Portfolio-menu"></div>
+
+    <div class="Portfolio-menu">
+        <ul class="Menu">
+            <li class="Menu-link">
+                <a href="#about">
+                    {{ 'index.sections.about.title'|trans }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="Menu-link">
+                <a href="#experience">
+                    {{ 'index.sections.experience.title'|trans }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="Menu-link">
+                <a href="#projects">
+                    {{ 'index.sections.projects.title'|trans }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="Menu-link">
+                <a href="#education">
+                    {{ 'index.sections.education.title'|trans }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <div class="Portfolio-tools">
         <ul class="Portfolio-links">
             <li>
@@ -54,16 +91,16 @@
 
 {% block main %}
     <ul class="Portfolio-sections">
-        <li class="Section">
+        <li class="Section" id="about">
             <h2 class="Section-title h2">{{ 'index.sections.about.title'|trans }}</h2>
         </li>
-        <li class="Section">
+        <li class="Section" id="experience">
             <h2 class="Section-title h2">{{ 'index.sections.experience.title'|trans }}</h2>
         </li>
-        <li class="Section">
+        <li class="Section" id="projects">
             <h2 class="Section-title h2">{{ 'index.sections.projects.title'|trans }}</h2>
         </li>
-        <li class="Section">
+        <li class="Section" id="education">
             <h2 class="Section-title h2">{{ 'index.sections.education.title'|trans }}</h2>
         </li>
     </ul>

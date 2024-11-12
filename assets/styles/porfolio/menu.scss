@@ -1,0 +1,37 @@
+.Menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &-link {
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-bold);
+
+      &:hover {
+        color: var(--accent);
+
+        svg {
+          transform: translateX(10px);
+          transition: 0.5s;
+
+          path {
+            fill: var(--accent);
+          }
+        }
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+
+        path {
+          fill: var(--text-bold);
+        }
+      }
+    }
+  }
+}
