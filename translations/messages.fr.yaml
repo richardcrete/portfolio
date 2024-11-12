@@ -1,0 +1,23 @@
+app:
+  title: 'Richard CRÉTÉ, développeur web'
+
+index:
+  title: 'Accueil'
+  job: 'Développeur web'
+  description: 'Je suis Richard, développeur web depuis 2019, basé en Alsace.'
+  sections:
+    about:
+      title: "À propos"
+      text: ""
+    experience:
+      title: "Expérience professionnelle"
+      text: ""
+    projects:
+      title: "Projets"
+      text: ""
+    education:
+      title: "Formation"
+      text: ""
+
+
+  tools: 'Réalisé avec <a href="https://symfony.com/">Symfony</a>, <a href="https://www.typescriptlang.org/">TypeScript</a> et <a href="https://remixicon.com/">RemixIcon</a>'

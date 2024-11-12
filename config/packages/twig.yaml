@@ -1,5 +1,9 @@
 twig:
     file_name_pattern: '*.twig'
+    globals:
+        github_link: 'https://github.com/richardcrete/'
+        linkedin_link: 'https://www.linkedin.com/in/richard-crété/'
+        locales: '%app_locales_array%'
 
 when@test:
     twig:

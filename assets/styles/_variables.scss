@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$minXs: 320px;
+$maxXs:  480px;
+$minSm: 481px;
+$maxSm: 600px;
+$minMd: 601px;
+$maxMd: 768px;
+$minLg: 769px;
+$maxLg: 1024px;
+$minXl: 1025px;
+$maxXl: 1280px;
+$min2xl: 1281px;
+
+//$themes: (
+//        light: (
+//                text: #0d1c19,
+//                background: #eef7f5,
+//                primary: #316861,
+//                secondary: #86a6c6,
+//                accent: #456192,
+//        ),
+//        dark: (
+//                text: #e4f3f0,
+//                background: #091311,
+//                primary: #98cec7,
+//                secondary: #395979,
+//                accent: #6c88ba,
+//        ),
+//);
+
+//$themes: (
+//        light: (
+//                text: #141f1d,
+//                background: #ecf3f1,
+//                primary: #3a5a55,
+//                secondary: #9695bb,
+//                accent: #625280,
+//        ),
+//        dark: (
+//                text: #e1ecea,
+//                background: #0d1412,
+//                primary: #a4c5c0,
+//                secondary: #444369,
+//                accent: #8f7ead,
+//        ),
+//);
+
+:root {
+  --font-family: 'Lato';
+  --h1-size: 40px;
+  --h2-size: 19px;
+
+
+  --text: #f4efe6;
+  --background: #19140c;
+  --primary: #d5c3a4;
+  --secondary: #396c32;
+  --accent: #55b076;
+  --text-bold: #fff;
+
+  &.isLight {
+    --text: #19140b;
+    --background: #f3efe7;
+    --primary: #5b492a;
+    --secondary: #9acd93;
+    --accent: #4fab71;
+    --text-bold: #000;
+  }
+}

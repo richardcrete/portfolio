@@ -1,0 +1,7 @@
+app:
+  title: 'Richard CRÉTÉ, web developer'
+
+index:
+  title: 'Home'
+  job: 'Web developer'
+  description: 'I''m Richard, web developer since 2019, based in Alsace, France.'
