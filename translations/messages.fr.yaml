@@ -1,14 +1,17 @@
 app:
-  title: 'Richard CRÉTÉ, développeur web'
+  title: "Richard CRÉTÉ, développeur web"
 
 index:
-  title: 'Accueil'
-  job: 'Développeur web'
-  description: 'Je suis Richard, développeur web depuis 2019, basé en Alsace.'
+  title: "Accueil"
+  job: "Développeur web"
+  description: "Je suis Richard, développeur web depuis 2019, basé en Alsace."
   sections:
     about:
       title: "À propos"
-      text: ""
+      text: "Bonjour ! 👋<br><br>
+            Je m'appelle Richard Crété, j'ai %age% ans et je suis développeur web depuis 2019. Je suis basé en Alsace, région dans laquelle j'ai fait mes études et travaillé dans mes premières agences.<br><br>
+            Au cours des dernières années, j'ai pu expérimenter plusieurs langages et frameworks et outils : Symfony (que j'apprécie beaucoup), Vue.js, Docker ou encore Shopify et WordPress.<br><br>
+            Pendant mon temps libre, j'aime voyager afin de faire des montagnes russes 🎢, jouer à GeoGuessr 📍 et faire du sport, notamment courir 🏃."
     experience:
       title: "Expérience professionnelle"
       text: ""
@@ -20,4 +23,4 @@ index:
       text: ""
 
 
-  tools: 'Réalisé avec <a href="https://symfony.com/">Symfony</a>, <a href="https://www.typescriptlang.org/">TypeScript</a> et <a href="https://remixicon.com/">RemixIcon</a>'
+#  tools: "Réalisé avec <a href=\"https://symfony.com/\">Symfony</a>, <a href=\"https://www.typescriptlang.org/\">TypeScript</a> et <a href=\"https://remixicon.com/\">RemixIcon</a>"

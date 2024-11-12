@@ -4,6 +4,7 @@ twig:
         github_link: 'https://github.com/richardcrete/'
         linkedin_link: 'https://www.linkedin.com/in/richard-crété/'
         locales: '%app_locales_array%'
+        age: '@App\Service\AgeService'
 
 when@test:
     twig:

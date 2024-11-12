@@ -1,7 +1,25 @@
 app:
-  title: 'Richard CRÉTÉ, web developer'
+  title: "Richard CRÉTÉ, web developer"
 
 index:
-  title: 'Home'
-  job: 'Web developer'
-  description: 'I''m Richard, web developer since 2019, based in Alsace, France.'
+  title: "Home"
+  job: "Web developer"
+  description: "I'm Richard, web developer since 2019, based in Alsace, France."
+  sections:
+    about:
+      title: "About"
+      text: "Hello! 👋<br><br>
+            My name is Richard Crété, I'm %age% years old and I'm web developer since 2019. I'm based in Alsace (France), the region where I studied and worked in my first agencies.<br><br>
+            Over the past few years, I've been able to experiment several languages, frameworks and tools: Symfony (which I really like), Vue.js, Docker, Shopify and WordPress.<br><br>
+            In my spare time, I like to travel to ride roller coasters 🎢, play GeoGuessr 📍 and play sports, especially running 🏃."
+    experience:
+      title: "Experience"
+      text: ""
+    projects:
+      title: "Projects"
+      text: ""
+    education:
+      title: "Education"
+      text: ""
+
+#  tools: "Powered by <a href=\"https://symfony.com/\">Symfony</a>, <a href=\"https://www.typescriptlang.org/\">TypeScript</a> and <a href=\"https://remixicon.com/\">RemixIcon</a>"

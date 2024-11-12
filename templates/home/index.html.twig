@@ -93,6 +93,9 @@
     <ul class="Portfolio-sections">
         <li class="Section" id="about">
             <h2 class="Section-title h2">{{ 'index.sections.about.title'|trans }}</h2>
+            <p>
+                {{ 'index.sections.about.text'|trans({'%age%': get_age()})|raw }}
+            </p>
         </li>
         <li class="Section" id="experience">
             <h2 class="Section-title h2">{{ 'index.sections.experience.title'|trans }}</h2>
