@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Project;
+use App\Entity\Tool;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -36,7 +37,7 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        // yield MenuItem::linkToDashboard('Dashboard', 'fa fa-dashboard');
-        yield MenuItem::linkToCrud('Project', 'fas fa-code', Project::class);
+        yield MenuItem::linkToCrud('Projects', 'fas fa-code', Project::class);
+        yield MenuItem::linkToCrud('Tools', 'fas fa-screwdriver-wrench', Tool::class);
     }
 }
