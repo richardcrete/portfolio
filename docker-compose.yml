@@ -12,14 +12,20 @@ services:
       - /tmp:rw
       - /.composer:rw
   db:
+    volumes:
+      - database_data:/var/lib/mysql
     image: mysql:5.7
     environment:
         - MYSQL_ROOT_PASSWORD=root
     ports:
       - "3306:3306"
+    restart: always
   adminer:
     image: adminer
     container_name: adminer
     restart: always
     ports:
       - "8081:8080"
+
+volumes:
+  database_data:
