@@ -1,4 +1,13 @@
 {
+    "a2lix/auto-form-bundle": {
+        "version": "0.4.7"
+    },
+    "a2lix/translation-form-bundle": {
+        "version": "3.2.4",
+        "files": [
+            "./config/packages/a2lix.yaml"
+        ]
+    },
     "doctrine/doctrine-bundle": {
         "version": "2.13",
         "recipe": {
@@ -13,6 +22,19 @@
             "./src/Repository/.gitignore"
         ]
     },
+    "doctrine/doctrine-migrations-bundle": {
+        "version": "3.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.1",
+            "ref": "1d01ec03c6ecbd67c3375c5478c9a423ae5d6a33"
+        },
+        "files": [
+            "config/packages/doctrine_migrations.yaml",
+            "migrations/.gitignore"
+        ]
+    },
     "easycorp/easyadmin-bundle": {
         "version": "4.14",
         "recipe": {
@@ -21,6 +43,9 @@
             "version": "3.0",
             "ref": "b131e6cbfe1b898a508987851963fff485986285"
         }
+    },
+    "knplabs/doctrine-behaviors": {
+        "version": "dev-sf7.0"
     },
     "symfony/console": {
         "version": "7.1",

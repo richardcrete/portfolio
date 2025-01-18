@@ -9,7 +9,10 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "a2lix/translation-form-bundle": "^3.2",
+        "doctrine/doctrine-migrations-bundle": "^3.4",
         "easycorp/easyadmin-bundle": "*",
+        "knplabs/doctrine-behaviors": "dev-sf7.0 as 2.6.3",
         "symfony/console": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/flex": "^2",
@@ -74,5 +77,11 @@
         "symfony/stopwatch": "7.1.*",
         "symfony/var-dumper": "7.1.*",
         "symfony/web-profiler-bundle": "7.1.*"
+    },
+    "repositories": {
+        "jfsenechal_doctrine_behaviors": {
+            "type": "vcs",
+            "url": "git@github.com:jfsenechal/DoctrineBehaviors.git"
+        }
     }
 }

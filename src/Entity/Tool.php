@@ -4,17 +4,18 @@ namespace App\Entity;
 
 use App\Repository\ToolRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Stringable;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ToolRepository::class)]
-class Tool
+class Tool implements Stringable
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: 'string', length: 255, nullable: false)]
     #[Assert\NotBlank]
     private ?string $name = null;
 
@@ -33,5 +34,10 @@ class Tool
         $this->name = $name;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
     }
 }
