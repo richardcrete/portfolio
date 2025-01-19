@@ -20,7 +20,7 @@ class TranslationsField implements FieldInterface
             ->onlyOnForms()
             ->setRequired(true)
             ->addFormTheme('bundles/EasyAdminBundle/crud/form/field/translations.html.twig')
-            ->addCssFiles('build/app.css')
+            ->addCssFiles('build/admin.css')
             ->setFormType(TranslationsType::class)
             ->setFormTypeOption('block_prefix', 'translations_field')
             ;
