@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Experience;
 use App\Entity\Project;
 use App\Entity\Tool;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -38,6 +39,7 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToCrud('Projects', 'fas fa-code', Project::class);
+        yield MenuItem::linkToCrud('Experiences ', 'fas fa-briefcase', Experience::class);
         yield MenuItem::linkToCrud('Tools', 'fas fa-screwdriver-wrench', Tool::class);
     }
 }

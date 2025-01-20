@@ -99,6 +99,35 @@
         </li>
         <li class="Section" id="experience">
             <h2 class="Section-title h2">{{ 'index.sections.experience.title'|trans }}</h2>
+
+            <ul class="Listing">
+                {% for experience in experiences %}
+                    <li class="Listing-item">
+                        <div class="Listing-date">
+                            {{ get_date(experience.startDate, experience.endDate, true) }}
+                        </div>
+                        <div class="Listing-content">
+                            <h3 class="Listing-title h3">
+                                {{ experience.name }} - {{ experience.translations[app.request.locale].job }}
+                                <div class="Listing-links">
+                                    <a href="{{ experience.translations[app.request.locale].link }}" class="Listing-link"
+                                       target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </h3>
+                            <p class="Listing-description">{{ experience.translations[app.request.locale].description }}</p>
+                            <ul class="Listing-tools">
+                                {% for tool in experience.tools %}
+                                    <li class="Tag">{{ tool.name }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
         </li>
         <li class="Section" id="projects">
             <h2 class="Section-title h2">{{ 'index.sections.projects.title'|trans }}</h2>
