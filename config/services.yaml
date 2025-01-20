@@ -28,6 +28,9 @@ services:
     App\Service\AgeService:
         class: App\Service\AgeService
 
+    App\Service\DateService:
+        class: App\Service\DateService
+
     App\Admin\TranslationsConfigurator:
         arguments:
             $fieldConfigurators: !tagged_iterator ea.field_configurator

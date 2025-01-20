@@ -5,6 +5,8 @@ twig:
         linkedin_link: 'https://www.linkedin.com/in/richard-crété/'
         locales: '%app_locales_array%'
         age: '@App\Service\AgeService'
+        date: '@App\Service\DateService'
+        images_path: '/images/'
 
 when@test:
     twig:

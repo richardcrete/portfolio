@@ -1,0 +1,75 @@
+.Listing {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: $minLg) {
+      flex-direction: row;
+    }
+  }
+
+  &-date {
+    @media (min-width: $minLg) {
+      min-width: 25%;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+
+  &-img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  &-link {
+    flex-direction: row;
+    align-items: center;
+
+    &:hover {
+      svg {
+        transition: 0.5s;
+
+        path {
+          fill: var(--accent);
+        }
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        fill: var(--text-bold);
+      }
+    }
+  }
+
+  &-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
