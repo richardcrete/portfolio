@@ -22,7 +22,7 @@
   &-content {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
   }
 
   &-img {
@@ -64,6 +64,11 @@
       path {
         fill: var(--text-bold);
       }
+    }
+
+    &.hasArrowIcon:hover {
+      transform: translate(2px, -2px);
+      transition: 0.5s;
     }
   }
 
