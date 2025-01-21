@@ -23,5 +23,8 @@
     "volta": {
         "node": "20.18.0",
         "yarn": "1.22.22"
+    },
+    "dependencies": {
+        "es-cookie": "^1.5.0"
     }
 }

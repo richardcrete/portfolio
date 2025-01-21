@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.get('_locale') }}">
+<html lang="{{ app.request.get('_locale') }}" class="{{ app.request.cookies.get('theme') == 'light' ? 'isLight' : '' }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
