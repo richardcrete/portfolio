@@ -35,8 +35,8 @@ class ExperienceCrudController extends AbstractCrudController
     {
         yield IdField::new('id')->hideOnForm();
         yield TextField::new('name')->setRequired(true);
-        yield DateField::new('startDate')->setRequired(true)->hideOnIndex();
-        yield DateField::new('endDate')->setRequired(false)->hideOnIndex();
+        yield DateField::new('startDate')->setRequired(true);
+        yield DateField::new('endDate')->setRequired(false);
         yield AssociationField::new('tools')->setRequired(true)->hideOnIndex();
         yield TranslationsField::new('translations')
             ->addTranslatableField(TextField::new('job')->setRequired(true))
