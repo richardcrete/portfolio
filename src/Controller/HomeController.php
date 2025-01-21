@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\DiplomaRepository;
 use App\Repository\ExperienceRepository;
 use App\Repository\ProjectRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,13 +21,14 @@ class HomeController extends AbstractController
     }
 
     #[Route('/', name: 'home', methods: ['GET'])]
-    public function index(ProjectRepository $projectRepository, ExperienceRepository $experienceRepository): Response
+    public function index(ProjectRepository $projectRepository, ExperienceRepository $experienceRepository, DiplomaRepository $diplomaRepository): Response
     {
         return $this->render(
             'home/index.html.twig',
             [
                 'projects' => $projectRepository->getProjects(),
                 'experiences' => $experienceRepository->getExperiences(),
+                'diplomas' => $diplomaRepository->getDiplomas(),
             ]
         );
     }

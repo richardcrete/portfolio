@@ -72,6 +72,21 @@
     }
   }
 
+  &-city {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      path {
+        fill: var(--text);
+      }
+    }
+  }
+
   &-tools {
     display: flex;
     flex-wrap: wrap;

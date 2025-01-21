@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Diploma;
 use App\Entity\Experience;
 use App\Entity\Project;
 use App\Entity\Tool;
@@ -41,5 +42,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Projects', 'fas fa-code', Project::class);
         yield MenuItem::linkToCrud('Experiences ', 'fas fa-briefcase', Experience::class);
         yield MenuItem::linkToCrud('Tools', 'fas fa-screwdriver-wrench', Tool::class);
+        yield MenuItem::linkToCrud('Diplomas', 'fas fa-graduation-cap', Diploma::class);
     }
 }
