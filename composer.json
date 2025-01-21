@@ -13,6 +13,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.4",
         "easycorp/easyadmin-bundle": "*",
         "knplabs/doctrine-behaviors": "dev-sf7.0 as 2.6.3",
+        "nesbot/carbon": "^3.8",
         "symfony/console": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/flex": "^2",

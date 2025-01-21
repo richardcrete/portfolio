@@ -2,18 +2,22 @@
 
 namespace App\Service;
 
+use Carbon\Carbon;
 use DateTime;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
 class DateService extends AbstractExtension
 {
     private RequestStack $requestStack;
+    private TranslatorInterface $translatorInterface;
 
-    public function __construct(RequestStack $requestStack)
+    public function __construct(RequestStack $requestStack, TranslatorInterface $translatorInterface)
     {
         $this->requestStack = $requestStack;
+        $this->translatorInterface = $translatorInterface;
     }
 
     public function getFunctions(): array
@@ -25,31 +29,25 @@ class DateService extends AbstractExtension
 
     public function getDate(DateTime $startDate, DateTime|null $endDate, bool $showMonth = false): string
     {
-        if ($endDate === null) {
-            switch ($this->requestStack->getCurrentRequest()->getLocale()) {
-                case "en":
-                    return "Since " . ($showMonth ? $startDate->format("M. Y") : $startDate->format("Y"));
-                default:
-                    return "Depuis " . ($showMonth ? $startDate->format("M. Y") : $startDate->format("Y"));
-            }
+        Carbon::setLocale($this->requestStack->getCurrentRequest()->getLocale());
+        $startDateCarbon = new Carbon($startDate);
+        $endDateCarbon = $endDate ? new Carbon($endDate) : null;
+        $startDateString = $showMonth
+            ? $startDateCarbon->getTranslatedShortMonthName() . " " . $startDateCarbon->format('Y')
+            : $startDateCarbon->format('Y');
+        $endDateString = null;
+        if ($endDateCarbon !== null) {
+            $endDateString = $showMonth
+                ? $endDateCarbon->getTranslatedShortMonthName() . " " . $endDateCarbon->format('Y')
+                : $endDateCarbon->format('Y');
         }
 
-        if (
-            $startDate->format("Y") === $endDate->format("Y")
-            || $startDate->format("Y m") === $endDate->format("Y m") && $showMonth
-        ) {
-            switch ($this->requestStack->getCurrentRequest()->getLocale()) {
-                case "en":
-                    return "During " . ($showMonth ? $startDate->format("M. Y") : $startDate->format("Y"));
-                default:
-                    return "En " . ($showMonth ? $startDate->format("M. Y") : $startDate->format("Y"));
-            }
+        if ($endDateString === null) {
+            return $this->translatorInterface->trans("app.since", ['date' => $startDateString]);
+        } else if ($startDateString === $endDateString) {
+            return $this->translatorInterface->trans("app.during", ['date' => $startDateString]);
         } else {
-            if ($showMonth) {
-                return $startDate->format("M. Y") . ' - ' . $endDate->format("M. Y");
-            } else {
-                return $startDate->format("Y") . ' - ' . $endDate->format("Y");
-            }
+            return $startDateString . ' - ' . $endDateString;
         }
     }
 }

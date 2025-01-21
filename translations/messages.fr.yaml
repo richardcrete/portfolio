@@ -1,5 +1,7 @@
 app:
   title: "Richard CRÉTÉ, développeur web"
+  since: "Depuis date"
+  during: "En date"
 
 index:
   title: "Accueil"
@@ -21,6 +23,3 @@ index:
     education:
       title: "Formation"
       text: ""
-
-
-#  tools: "Réalisé avec <a href=\"https://symfony.com/\">Symfony</a>, <a href=\"https://www.typescriptlang.org/\">TypeScript</a> et <a href=\"https://remixicon.com/\">RemixIcon</a>"
