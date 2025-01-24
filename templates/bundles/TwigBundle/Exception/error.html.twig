@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'error.title'|trans }}
+    {% if app.request.get('_locale') != '' %}
+        {{ 'error.title'|trans }}
+    {% else %}
+        Erreur
+    {% endif %}
 {% endblock %}
 
 {% block header %}
