@@ -6,6 +6,7 @@ use App\Entity\Diploma;
 use App\Entity\Experience;
 use App\Entity\Project;
 use App\Entity\Tool;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -43,5 +44,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Experiences ', 'fas fa-briefcase', Experience::class);
         yield MenuItem::linkToCrud('Tools', 'fas fa-screwdriver-wrench', Tool::class);
         yield MenuItem::linkToCrud('Diplomas', 'fas fa-graduation-cap', Diploma::class);
+        yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);
     }
 }

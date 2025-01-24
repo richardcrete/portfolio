@@ -23,3 +23,17 @@ index:
     education:
       title: "Education"
       text: ""
+
+login:
+  title: "Login"
+  form:
+    email:
+      label: "Your email address"
+      placeholder: "john.doe@example.com"
+    submit: "Submit"
+    success: "Your login link has been sent! 🙌"
+    error: "An error occurred while sending the login link. Perhaps you don't have access to this resource 😉"
+
+error:
+  title: "Error"
+  back: "Back to home"

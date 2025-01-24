@@ -1,4 +1,5 @@
 .Portfolio {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 40px 25px;
@@ -48,6 +49,14 @@
     }
   }
 
+  &-form {
+    margin-top: 70px;
+
+    @media (min-width: $minXl) {
+      margin-top: 0;
+    }
+  }
+
   &-tools {
     display: flex;
     flex-direction: row;
@@ -55,6 +64,10 @@
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 70px;
+
+    @media (min-width: $minXl) {
+      margin-top: 0;
+    }
   }
 
   &-links, &-switchers {

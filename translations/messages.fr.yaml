@@ -23,3 +23,17 @@ index:
     education:
       title: "Formation"
       text: ""
+
+login:
+  title: "Connexion"
+  form:
+    email:
+      label: "Votre adresse mail"
+      placeholder: "marie.dupont@exemple.fr"
+    submit: "Envoyer"
+    success: "Votre lien de connexion à bien été envoyé ! 🙌"
+    error: "Une erreur est survenue lors de l'envoi du lien de connexion. Peut-être que vous n'avez pas accès à cette ressource 😉"
+
+  error:
+    title: "Erreur"
+    back: "Retour à l'accueil"

@@ -12,6 +12,7 @@
         "a2lix/translation-form-bundle": "^3.2",
         "doctrine/doctrine-migrations-bundle": "^3.4",
         "easycorp/easyadmin-bundle": "*",
+        "getbrevo/brevo-php": "^2.0",
         "knplabs/doctrine-behaviors": "dev-sf7.0 as 2.6.3",
         "nesbot/carbon": "^3.8",
         "symfony/console": "7.1.*",
