@@ -14,12 +14,12 @@ services:
   db:
     volumes:
       - database_data:/var/lib/mysql
-    image: mysql:5.7
-    environment:
-        - MYSQL_ROOT_PASSWORD=root
+    image: mysql:latest
     ports:
       - "3306:3306"
     restart: always
+    env_file:
+      - .env.local
   adminer:
     image: adminer
     container_name: adminer
