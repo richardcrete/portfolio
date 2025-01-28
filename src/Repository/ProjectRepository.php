@@ -21,8 +21,9 @@ class ProjectRepository extends ServiceEntityRepository
             ->from(Project::class, 'r')
             ->leftJoin('r.translations', 'p')
             ->leftJoin('r.tools', 't')
-            ->orderBy('r.startDate', 'desc')
+            ->orderBy('r.onGoing', 'desc')
             ->addOrderBy('r.endDate', 'desc')
+            ->addOrderBy('r.startDate', 'desc')
             ->getQuery()
             ->getResult();
     }

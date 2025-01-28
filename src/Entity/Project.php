@@ -31,6 +31,10 @@ class Project implements TranslatableInterface
     #[Assert\Type("DateTime")]
     private ?DateTime $endDate = null;
 
+    #[ORM\Column(type: 'boolean', nullable: false, options: ['default' => false])]
+    #[Assert\Type("boolean")]
+    private ?bool $onGoing = null;
+
     #[ORM\ManyToMany(targetEntity: Tool::class)]
     #[ORM\JoinColumn(nullable: false, onDelete: 'cascade')]
     #[ORM\JoinTable(name: 'project_tool')]
@@ -81,6 +85,19 @@ class Project implements TranslatableInterface
     public function setEndDate(?DateTime $endDate): static
     {
         $this->endDate = $endDate;
+
+        return $this;
+    }
+
+
+    public function getOnGoing(): ?bool
+    {
+        return $this->onGoing;
+    }
+
+    public function setOnGoing(?bool $onGoing): static
+    {
+        $this->onGoing = $onGoing;
 
         return $this;
     }

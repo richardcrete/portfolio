@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -40,6 +41,7 @@ class ProjectCrudController extends AbstractCrudController
         yield TextField::new('name')->setRequired(true);
         yield DateField::new('startDate')->setRequired(true)->hideOnIndex();
         yield DateField::new('endDate')->setRequired(false)->hideOnIndex();
+        yield BooleanField::new('onGoing')->setRequired(false);
         yield ImageField::new('image')->setRequired(false)
             ->setFileConstraints(new Image(mimeTypes: ['image/jpg', 'image/jpeg', 'image/png']))
             ->setBasePath('/images/')
