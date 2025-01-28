@@ -40,7 +40,7 @@ class ProjectCrudController extends AbstractCrudController
         yield TextField::new('name')->setRequired(true);
         yield DateField::new('startDate')->setRequired(true)->hideOnIndex();
         yield DateField::new('endDate')->setRequired(false)->hideOnIndex();
-        yield ImageField::new('image')->setRequired(true)
+        yield ImageField::new('image')->setRequired(false)
             ->setFileConstraints(new Image(mimeTypes: ['image/jpg', 'image/jpeg', 'image/png']))
             ->setBasePath('/images/')
             ->setUploadedFileNamePattern(fn(UploadedFile $file): string => sprintf('%s.%s', uniqid(), $file->guessExtension()))

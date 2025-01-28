@@ -37,8 +37,7 @@ class Project implements TranslatableInterface
     #[ORM\InverseJoinColumn(nullable: false, onDelete: 'RESTRICT')]
     private ?Collection $tools = null;
 
-    #[ORM\Column(length: 255, nullable: false)]
-    #[Assert\NotBlank]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
