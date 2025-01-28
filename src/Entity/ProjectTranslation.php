@@ -23,7 +23,6 @@ class ProjectTranslation implements TranslationInterface
     private ?string $description = null;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Assert\NotBlank]
     #[Assert\Url]
     private ?string $link = null;
 

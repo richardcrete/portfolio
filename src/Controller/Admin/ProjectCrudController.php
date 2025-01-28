@@ -49,7 +49,7 @@ class ProjectCrudController extends AbstractCrudController
         yield UrlField::new('githubLink')->setRequired(false)->hideOnIndex();
         yield TranslationsField::new('translations')
             ->addTranslatableField(TextField::new('description')->setRequired(true))
-            ->addTranslatableField(UrlField::new('link')->setRequired(true));
+            ->addTranslatableField(UrlField::new('link')->setRequired(false));
     }
 
     public function configureFilters(Filters $filters): Filters
