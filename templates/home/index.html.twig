@@ -140,8 +140,10 @@
                             {{ get_date(project.startDate, project.endDate, false) }}
                         </div>
                         <div class="Listing-content">
-                            <img class="Listing-img" src="{{ images_path }}{{ project.image }}"
-                                 alt="{{ project.name }}">
+                            {% if project.image != '' %}
+                                <img class="Listing-img" src="{{ images_path }}{{ project.image }}"
+                                     alt="{{ project.name }}">
+                            {% endif %}
                             <h3 class="Listing-title h3">
                                 {{ project.name }}
                                 <div class="Listing-links">
@@ -181,7 +183,8 @@
                         </div>
                         <div class="Listing-content">
                             <h3 class="Listing-title h3">
-                                {{ diploma.translations[app.request.locale].name }} - {{ diploma.translations[app.request.locale].school }}
+                                {{ diploma.translations[app.request.locale].name }}
+                                - {{ diploma.translations[app.request.locale].school }}
                             </h3>
                             <p class="Listing-city">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
