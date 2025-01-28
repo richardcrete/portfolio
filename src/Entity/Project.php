@@ -41,7 +41,6 @@ class Project implements TranslatableInterface
     private ?string $image = null;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    #[Assert\NotBlank]
     #[Assert\Url]
     private ?string $githubLink = null;
 
