@@ -119,7 +119,7 @@
                                     </a>
                                 </div>
                             </h3>
-                            <p class="Listing-description">{{ experience.translations[app.request.locale].description }}</p>
+                            <div class="Listing-description">{{ experience.translations[app.request.locale].description|raw }}</div>
                             <ul class="Listing-tools">
                                 {% for tool in experience.tools %}
                                     <li class="Tag">{{ tool.name }}</li>
@@ -165,7 +165,7 @@
                                     {% endif %}
                                 </div>
                             </h3>
-                            <p class="Listing-description">{{ project.translations[app.request.locale].description }}</p>
+                            <div class="Listing-description">{{ project.translations[app.request.locale].description|raw }}</div>
                             <ul class="Listing-tools">
                                 {% for tool in project.tools %}
                                     <li class="Tag">{{ tool.name }}</li>

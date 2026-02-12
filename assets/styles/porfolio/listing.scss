@@ -72,6 +72,28 @@
     }
   }
 
+  &-description {
+    strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    ul, ol {
+      padding-left: 30px;
+    }
+  }
+
   &-city {
     display: flex;
     align-items: center;

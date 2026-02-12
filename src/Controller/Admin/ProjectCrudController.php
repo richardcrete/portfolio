@@ -2,7 +2,6 @@
 
 namespace App\Controller\Admin;
 
-use App\Admin\TranslatableTextFilter;
 use App\Admin\TranslationsField;
 use App\Entity\Project;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -13,6 +12,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\UrlField;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -50,7 +50,7 @@ class ProjectCrudController extends AbstractCrudController
         yield AssociationField::new('tools')->setRequired(true)->hideOnIndex();
         yield UrlField::new('githubLink')->setRequired(false)->hideOnIndex();
         yield TranslationsField::new('translations')
-            ->addTranslatableField(TextField::new('description')->setRequired(true))
+            ->addTranslatableField(TextEditorField::new('description')->setRequired(true))
             ->addTranslatableField(UrlField::new('link')->setRequired(false));
     }
 
