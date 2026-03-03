@@ -36,6 +36,7 @@ const frontConfig = Encore.getWebpackConfig();
 
 Encore
     .addEntry('admin', './assets/js/admin/admin.js')
+    .enableVersioning(false)
 ;
 
 const adminConfig = Encore.getWebpackConfig();
