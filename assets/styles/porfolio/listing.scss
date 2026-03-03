@@ -92,6 +92,11 @@
     ul, ol {
       padding-left: 30px;
     }
+
+    a {
+      display: unset;
+      color: var(--accent);
+    }
   }
 
   &-city {
