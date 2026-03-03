@@ -30,7 +30,7 @@ class DashboardController extends AbstractDashboardController
 
     public function configureDashboard(): Dashboard
     {
-        return Dashboard::new()->setTitle('Admin');
+        return Dashboard::new()->setTitle('Admin')->setFaviconPath('favicon/favicon.ico');
     }
 
     public function configureCrud(): Crud
