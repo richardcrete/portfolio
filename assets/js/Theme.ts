@@ -6,7 +6,7 @@ enum ThemeEnum {
 }
 
 export default class Theme {
-    public static theme: ThemeEnum = ThemeEnum.dark;
+    public static theme: ThemeEnum = ThemeEnum.light;
     public static themeSwitcher: HTMLButtonElement | null = document.querySelector("button.Portfolio-theme");
 
     public static init(): void {
@@ -25,10 +25,10 @@ export default class Theme {
             this.theme = ThemeEnum.light;
         }
 
-        if (Cookies.get("theme") === ThemeEnum.light) {
-            this.setCookie("theme", ThemeEnum.dark);
-        } else {
+        if (Cookies.get("theme") === ThemeEnum.dark) {
             this.setCookie("theme", ThemeEnum.light);
+        } else {
+            this.setCookie("theme", ThemeEnum.dark);
         }
     }
 
@@ -37,6 +37,6 @@ export default class Theme {
     }
 
     public static setCookie(name: string, value: string): void {
-        Cookies.set(name, value, { expires: 30 })
+        Cookies.set(name, value, {expires: 30})
     }
 }
