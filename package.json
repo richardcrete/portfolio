@@ -21,7 +21,7 @@
         "build": "encore production --progress"
     },
     "volta": {
-        "node": "20.18.0",
+        "node": "24.14.1",
         "yarn": "1.22.22"
     },
     "dependencies": {
