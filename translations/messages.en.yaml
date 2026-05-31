@@ -2,6 +2,8 @@ app:
   title: "Richard CRÉTÉ, web developer"
   since: "Since date"
   during: "During date"
+  resume: "My Resume"
+  resume_filename: "Resume"
 
 index:
   title: "Home"
