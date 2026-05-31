@@ -6,6 +6,7 @@ twig:
         locales: '%app_locales_array%'
         age: '@App\Service\AgeService'
         date: '@App\Service\DateService'
+        document: '@App\Service\DocumentService'
         images_path: '/images/'
 
 when@test:
