@@ -50,7 +50,7 @@ class ProjectCrudController extends AbstractCrudController
         yield AssociationField::new('tools')->setRequired(true)->hideOnIndex();
         yield UrlField::new('githubLink')->setRequired(false)->hideOnIndex();
         yield TranslationsField::new('translations')
-            ->addTranslatableField(TextEditorField::new('name')->setRequired(true))
+            ->addTranslatableField(TextField::new('name')->setRequired(true))
             ->addTranslatableField(TextEditorField::new('description')->setRequired(true))
             ->addTranslatableField(UrlField::new('link')->setRequired(false));
     }
