@@ -164,7 +164,7 @@
             <ul class="Listing">
                 {% for experience in experiences %}
                     {% set locale = app.request.locale %}
-                    {% if project.translations[locale] is not defined %}
+                    {% if experience.translations[locale] is not defined %}
                         {% set locale = app.request.defaultLocale %}
                     {% endif %}
                     <li class="Listing-item">
@@ -201,7 +201,7 @@
             <ul class="Listing">
                 {% for diploma in diplomas %}
                     {% set locale = app.request.locale %}
-                    {% if project.translations[locale] is not defined %}
+                    {% if diploma.translations[locale] is not defined %}
                         {% set locale = app.request.defaultLocale %}
                     {% endif %}
                     <li class="Listing-item">
