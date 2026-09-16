@@ -24,7 +24,7 @@ class DiplomaCrudController extends AbstractCrudController
         return $crud
             ->setEntityLabelInSingular('Diploma')
             ->setEntityLabelInPlural('Diplomas')
-            ->setSearchFields(['id', 'date', 'city'])
+            ->setSearchFields(['id', 'translations.name', 'translations.school', 'city'])
             ->showEntityActionsInlined()
             ->setPaginatorPageSize(50);
     }
@@ -32,6 +32,8 @@ class DiplomaCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         yield IdField::new('id')->hideOnForm();
+        yield TextField::new('name')->onlyOnIndex();
+        yield TextField::new('school')->onlyOnIndex();
         yield DateField::new('startDate')->setRequired(true);
         yield DateField::new('endDate')->setRequired(true);
         yield TextField::new('city')->setRequired(true);

@@ -122,10 +122,10 @@
                         <div class="Listing-content">
                             {% if project.image != '' %}
                                 <img class="Listing-img" src="{{ images_path }}{{ project.image }}"
-                                     alt="{{ project.name }}">
+                                     alt="{{ project.translations[app.request.locale].name }}">
                             {% endif %}
                             <h3 class="Listing-title h3">
-                                {{ project.name }}
+                                {{ project.translations[app.request.locale].name }}
                                 <div class="Listing-links">
                                     {% if project.translations[locale].link != '' %}
                                         <a href="{{ project.translations[locale].link }}"

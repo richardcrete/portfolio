@@ -36,6 +36,28 @@ class Diploma implements TranslatableInterface
         return $this->id;
     }
 
+    public function getName(): ?string
+    {
+        foreach ($this->getTranslations() as $translation) {
+            if ($translation->getLocale() == 'fr') {
+                return $translation->getName();
+            }
+        }
+
+        return null;
+    }
+
+    public function getSchool(): ?string
+    {
+        foreach ($this->getTranslations() as $translation) {
+            if ($translation->getLocale() == 'fr') {
+                return $translation->getSchool();
+            }
+        }
+
+        return null;
+    }
+
     public function getStartDate(): ?DateTime
     {
         return $this->startDate;

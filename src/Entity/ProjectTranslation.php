@@ -18,6 +18,10 @@ class ProjectTranslation implements TranslationInterface
     #[ORM\Column]
     private ?int $id = null;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: false)]
+    #[Assert\NotBlank]
+    private ?string $name = null;
+
     #[ORM\Column(type: 'text', nullable: true)]
     #[Assert\NotBlank]
     private ?string $description = null;
@@ -35,6 +39,18 @@ class ProjectTranslation implements TranslationInterface
     public function setId(?int $id): static
     {
         $this->id = $id;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): static
+    {
+        $this->name = $name;
 
         return $this;
     }

@@ -30,7 +30,7 @@ class ProjectCrudController extends AbstractCrudController
         return $crud
             ->setEntityLabelInSingular('Project')
             ->setEntityLabelInPlural('Projects')
-            ->setSearchFields(['id', 'name', 'image', 'translations.description'])
+            ->setSearchFields(['id', 'translations.name', 'image', 'translations.description'])
             ->showEntityActionsInlined()
             ->setPaginatorPageSize(50);
     }
@@ -38,7 +38,7 @@ class ProjectCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         yield IdField::new('id')->hideOnForm();
-        yield TextField::new('name')->setRequired(true);
+        yield TextField::new('name')->onlyOnIndex();
         yield DateField::new('startDate')->setRequired(true)->hideOnIndex();
         yield DateField::new('endDate')->setRequired(false)->hideOnIndex();
         yield BooleanField::new('onGoing')->setRequired(false);
@@ -50,6 +50,7 @@ class ProjectCrudController extends AbstractCrudController
         yield AssociationField::new('tools')->setRequired(true)->hideOnIndex();
         yield UrlField::new('githubLink')->setRequired(false)->hideOnIndex();
         yield TranslationsField::new('translations')
+            ->addTranslatableField(TextEditorField::new('name')->setRequired(true))
             ->addTranslatableField(TextEditorField::new('description')->setRequired(true))
             ->addTranslatableField(UrlField::new('link')->setRequired(false));
     }
