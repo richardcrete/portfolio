@@ -111,6 +111,10 @@
 
             <ul class="Listing">
                 {% for project in projects %}
+                    {% set locale = app.request.locale %}
+                    {% if project.translations[locale] is not defined %}
+                        {% set locale = app.request.defaultLocale %}
+                    {% endif %}
                     <li class="Listing-item">
                         <div class="Listing-date">
                             {{ get_date(project.startDate, project.endDate, false) }}
@@ -123,8 +127,8 @@
                             <h3 class="Listing-title h3">
                                 {{ project.name }}
                                 <div class="Listing-links">
-                                    {% if project.translations[app.request.locale].link != '' %}
-                                        <a href="{{ project.translations[app.request.locale].link }}"
+                                    {% if project.translations[locale].link != '' %}
+                                        <a href="{{ project.translations[locale].link }}"
                                            class="Listing-link hasArrowIcon"
                                            target="_blank">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -143,7 +147,7 @@
                                     {% endif %}
                                 </div>
                             </h3>
-                            <div class="Listing-description">{{ project.translations[app.request.locale].description|raw }}</div>
+                            <div class="Listing-description">{{ project.translations[locale].description|raw }}</div>
                             <ul class="Listing-tools">
                                 {% for tool in project.tools %}
                                     <li class="Tag">{{ tool.name }}</li>
@@ -159,15 +163,19 @@
 
             <ul class="Listing">
                 {% for experience in experiences %}
+                    {% set locale = app.request.locale %}
+                    {% if project.translations[locale] is not defined %}
+                        {% set locale = app.request.defaultLocale %}
+                    {% endif %}
                     <li class="Listing-item">
                         <div class="Listing-date">
                             {{ get_date(experience.startDate, experience.endDate, true) }}
                         </div>
                         <div class="Listing-content">
                             <h3 class="Listing-title h3">
-                                {{ experience.name }} - {{ experience.translations[app.request.locale].job }}
+                                {{ experience.name }} - {{ experience.translations[locale].job }}
                                 <div class="Listing-links">
-                                    <a href="{{ experience.translations[app.request.locale].link }}"
+                                    <a href="{{ experience.translations[locale].link }}"
                                        class="Listing-link hasArrowIcon"
                                        target="_blank">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -176,7 +184,7 @@
                                     </a>
                                 </div>
                             </h3>
-                            <div class="Listing-description">{{ experience.translations[app.request.locale].description|raw }}</div>
+                            <div class="Listing-description">{{ experience.translations[locale].description|raw }}</div>
                             <ul class="Listing-tools">
                                 {% for tool in experience.tools %}
                                     <li class="Tag">{{ tool.name }}</li>
@@ -192,14 +200,18 @@
 
             <ul class="Listing">
                 {% for diploma in diplomas %}
+                    {% set locale = app.request.locale %}
+                    {% if project.translations[locale] is not defined %}
+                        {% set locale = app.request.defaultLocale %}
+                    {% endif %}
                     <li class="Listing-item">
                         <div class="Listing-date">
                             {{ get_date(diploma.startDate, diploma.endDate, false) }}
                         </div>
                         <div class="Listing-content">
                             <h3 class="Listing-title h3">
-                                {{ diploma.translations[app.request.locale].name }}
-                                - {{ diploma.translations[app.request.locale].school }}
+                                {{ diploma.translations[locale].name }}
+                                - {{ diploma.translations[locale].school }}
                             </h3>
                             <p class="Listing-city">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

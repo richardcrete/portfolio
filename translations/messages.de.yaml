@@ -1,0 +1,41 @@
+app:
+  title: "Richard CRÉTÉ, Webentwickler"
+  since: "Seit date"
+  during: "Im date"
+  resume: "Mein Lebenslauf"
+  resume_filename: "Lebenslauf"
+
+index:
+  title: "Startseite"
+  job: "Webentwickler"
+  description: "Ich bin Richard,  Webentwickler seit 2019, ansässig im Elsass, Frankreich."
+  sections:
+    about:
+      title: "Über mich"
+      text: "Hallo! 👋<br><br>
+            Mein Name ist Richard Crété, ich bin %age% Jahre alt und arbeite seit 2019 als Webentwickler. Ich lebe im Elsass (Frankreich), der Region, in der ich studiert und in meinen ersten Agenturen gearbeitet habe.<br><br>
+            In den letzten Jahren konnte ich mit verschiedenen Programmiersprachen, Frameworks und Tools experimentieren: Symfony (das mir sehr gut gefällt), Vue.js, Docker, Shopify und WordPress.<br><br>
+            In meiner Freizeit reise ich gerne um Achterbahn zu fahren 🎢, spiele GeoGuessr 📍 und treibe Sport, vor allem Laufen 🏃."
+    experience:
+      title: "Berufserfahrung"
+      text: ""
+    projects:
+      title: "Projekte"
+      text: ""
+    education:
+      title: "Ausbildung"
+      text: ""
+
+login:
+  title: "Anmelden"
+  form:
+    email:
+      label: "Ihre E-Mail-Adresse"
+      placeholder: "max.mustermann@beispiel.de"
+    submit: "Senden"
+    success: "Ihr Anmeldelink wurde erfolgreich versendet! 🙌"
+    error: " Beim Versenden des Anmeldelinks ist ein Fehler aufgetreten. Möglicherweise haben Sie keinen Zugriff auf diese Ressource 😉"
+
+  error:
+    title: "Fehler"
+    back: "Zurück zur Startseite"

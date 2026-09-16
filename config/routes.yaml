@@ -7,7 +7,7 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
-    prefix: '/{_locale<fr|en>}'
+    prefix: '/{_locale<fr|en|de>}'
     defaults:
         _locale: 'fr'
 
