@@ -19,10 +19,6 @@ class Project implements TranslatableInterface
     #[ORM\Column(type: 'integer', unique: true, nullable: false)]
     private ?int $id = null;
 
-    #[ORM\Column(type: 'text', nullable: false)]
-    #[Assert\NotBlank]
-    private ?string $name = null;
-
     #[ORM\Column(type: 'date', nullable: false)]
     #[Assert\Type("DateTime")]
     private ?DateTime $startDate = null;
@@ -55,14 +51,13 @@ class Project implements TranslatableInterface
 
     public function getName(): ?string
     {
-        return $this->name;
-    }
+        foreach ($this->getTranslations() as $translation) {
+            if ($translation->getLocale() == 'fr') {
+                return $translation->getName();
+            }
+        }
 
-    public function setName(string $name): static
-    {
-        $this->name = $name;
-
-        return $this;
+        return null;
     }
 
     public function getStartDate(): ?DateTime
